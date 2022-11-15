@@ -14,13 +14,13 @@ body {
     background-color: azure;
 }
 
-.wrapper {
+.wrapper-header {
     display: grid;
 }
 
 header {
     color: var(--main-color);
-    margin-top: 1.5em;
+    margin-top: 2em;
     font-size: 1.5em;
 }
 
@@ -34,4 +34,19 @@ header {
     margin-top: 1em;
 }
 
-.at-home {}
+.welcome-msg:last-child {
+    margin: 0.5em;
+}
+
+
+.wrapper-where {
+    display: grid;
+    grid-column: 2;
+}
+
+
+.where {
+    color: var(--main-color);
+    text-align: center;
+    font-size: 1.2em;
+}
