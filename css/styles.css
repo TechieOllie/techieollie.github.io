@@ -31,4 +31,6 @@
         ". . .";
 }
 
-.nav-bar_upper-center p {}
+.nav-bar_upper-center p {
+    font-size: 24px;
+}
