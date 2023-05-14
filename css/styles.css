@@ -29,11 +29,25 @@ p {
 }
 
 button {
+    padding: 6px;
     position: relative;
     top: 40px;
     font-size: 30px;
-    border-color: #e7e7e7;
+    border-color: black;
+    border-radius: 6px;
     color: black;
+}
+
+button:hover {
+    color: white;
+    background-color: black;
+    border-color: #fff;
+    border-radius: 6px;
+}
+
+button:active {
+    color: green;
+    background-color: black;
 }
 
 .tooltip {
@@ -42,9 +56,10 @@ button {
 }
 
 .tooltip .tooltiptext {
+    font-size: 18px;
     visibility: hidden;
     width: 140px;
-    background-color: grey;
+    background-color: black;
     color: #fff;
     text-align: center;
     border-radius: 6px;
