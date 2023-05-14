@@ -1,5 +1,5 @@
 function copyText() {
-  navigator.clipboard.writeText("");
+  navigator.clipboard.writeText("aide@simplesreparation.com");
   var tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "Addresse mail copier";
 }
