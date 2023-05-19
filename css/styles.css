@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
 :root {
-    --background: #626262;
-    --main-text-color: #ffffff;
+    --main-color-1: #00EEFF;
+    --main-color-2: #fff;
+    --main-color-3: #000;
 }
 
 * {
@@ -11,11 +12,11 @@
 }
 
 body {
-    background-color: black;
+    background-color: var(--main-color-3);
 }
 
 .loaded {
-    background-color: white;
+    background-color: var(--main-color-2);
 }
 
 .preloader {
@@ -25,7 +26,7 @@ body {
     right: 0;
     bottom: 0;
     text-align: center;
-    background: black;
+    background: var(--main-color-3);
 }
 
 .preloader::before {
@@ -48,13 +49,13 @@ body {
 }
 
 .preloader .spinner-frame .spinner-cover {
-    background: black;
+    background: var(--main-color-3);
     width: 100%;
     height: 100%;
     border-radius: 50%;
     position: relative;
     z-index: 2;
-    color: antiquewhite;
+    color: var(--main-color-2);
 }
 
 .preloader .spinner-frame .spinner-cover img {
@@ -64,7 +65,7 @@ body {
 }
 
 .preloader .spinner-frame .spinner-bar {
-    background: black;
+    background: var(--main-color-3);
     width: 50%;
     height: 50%;
     position: absolute;
@@ -76,7 +77,7 @@ body {
 }
 
 .preloader .spinner-frame .spinner-bar2 {
-    background: black;
+    background: var(--main-color-3);
     width: 50%;
     height: 50%;
     position: absolute;
@@ -90,34 +91,34 @@ body {
 @-webkit-keyframes spinny {
     0% {
         transform: rotate(0deg);
-        background: #00EEFF;
+        background: var(--main-color-1);
     }
 
     50% {
         transform: rotate(180deg);
-        background: #00EEFF;
+        background: var(--main-color-1);
     }
 
     100% {
         transform: rotate(360deg);
-        background: #00EEFF;
+        background: var(--main-color-1);
     }
 }
 
 @-webkit-keyframes spinny2 {
     0% {
         transform: rotate(360deg);
-        background: white;
+        background: var(--main-color-2);
     }
 
     50% {
         transform: rotate(180deg);
-        background: white;
+        background: var(--main-color-2);
     }
 
     100% {
         transform: rotate(0deg);
-        background: white;
+        background: var(--main-color-2);
     }
 }
 
