@@ -16,6 +16,11 @@ body {
     background-color: var(--main-color-3);
 }
 
+a,
+a:visited {
+    text-decoration: none;
+}
+
 .loaded {
     background-color: var(--main-color-2);
 }
@@ -73,6 +78,7 @@ body {
     top: 0;
     left: 0;
     border-radius: 100% 0 0 0;
+    animation: spinny 2s linear infinite;
     -webkit-animation: spinny 2s linear infinite;
     transform-origin: 100% 100%;
 }
@@ -85,8 +91,43 @@ body {
     top: 0;
     left: 0;
     border-radius: 100% 0 0 0;
+    animation: spinny2 2s linear infinite;
     -webkit-animation: spinny2 2s linear infinite;
     transform-origin: 100% 100%;
+}
+
+@keyframes spinny {
+    0% {
+        transform: rotate(0deg);
+        background: var(--main-color-1);
+    }
+
+    50% {
+        transform: rotate(180deg);
+        background: var(--main-color-1);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        background: var(--main-color-1);
+    }
+}
+
+@keyframes spinny2 {
+    0% {
+        transform: rotate(360deg);
+        background: var(--main-color-2);
+    }
+
+    50% {
+        transform: rotate(180deg);
+        background: var(--main-color-2);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        background: var(--main-color-2);
+    }
 }
 
 @-webkit-keyframes spinny {
@@ -155,3 +196,16 @@ nav ul li {
 }
 
 /*if width under 500px then different navbar*/
+
+nav ul li a {
+    color: var(--main-color-2);
+}
+
+nav ul li a:hover {
+    color: var(--main-color-1);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li #active {
+    color: var(--main-color-1);
+}
