@@ -59,6 +59,12 @@ footer a {
 
 .Icons {
     grid-area: Icons;
+    display: flex;
+    flex-direction: column;
+}
+
+.Icons a {
+    margin-bottom: 0.5%;
 }
 
 .Icons h1 {
