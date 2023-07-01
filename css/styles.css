@@ -517,3 +517,93 @@ nav ul li #active {
         right: -30%;
     }
 }
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    flex-shrink: 0;
+}
+
+.homepage .slogan {
+
+    color: #0C0B0B;
+    font-size: 250%;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 4%;
+}
+
+.homepage .offer {
+    color: #0C0B0B;
+    text-align: center;
+    font-size: 200%;
+    margin: 2%;
+}
+
+.homepage .services {
+    color: #0C0B0B;
+    text-align: center;
+    font-size: 200%;
+    padding-top: 2%;
+    border-top: 2px solid black;
+    width: 100%;
+}
+
+.homepage .service_page {
+    color: #0C0B0B;
+    text-align: center;
+    font-size: 100%;
+}
+
+.homepage .standard-stuff {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.homepage .standard-stuff .standard-name {
+    color: #0EF;
+    text-align: center;
+    font-size: 400%;
+    align-self: center;
+    justify-self: center;
+    margin-right: 10%;
+    margin-top: 4%;
+}
+
+.homepage .standard-stuff .standard-text {
+    color: #0C0B0B;
+    text-align: center;
+    font-size: 150%;
+    align-self: center;
+    justify-self: center;
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+.homepage .advanced-stuff {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.homepage .advanced-stuff .advanced-name {
+    color: #06F;
+    text-align: center;
+    font-size: 400%;
+    align-self: center;
+    justify-self: center;
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+.homepage .advanced-stuff .advanced-text {
+    color: #0C0B0B;
+    text-align: center;
+    font-size: 150%;
+    align-self: center;
+    justify-self: center;
+    margin-right: 10%;
+    margin-top: 4%;
+}
