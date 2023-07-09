@@ -519,91 +519,145 @@ nav ul li #active {
 }
 
 .homepage {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Slogan Slogan"
+        "offer offer"
+        "Standard Standard"
+        "Advanced Advanced"
+        "Premium Premium"
+        "Contact Contact";
 }
 
-.homepage .slogan {
-
-    color: #0C0B0B;
-    font-size: 250%;
-    text-align: center;
+.Slogan {
+    grid-area: Slogan;
+    font-size: 40px;
     font-weight: 500;
-    margin-top: 4%;
-}
-
-.homepage .offer {
-    color: #0C0B0B;
     text-align: center;
-    font-size: 200%;
     margin: 2%;
 }
 
-.homepage .services {
+.offer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "o-1"
+        "o-2";
+    grid-area: offer;
+    text-align: center;
+    font-size: 26px;
+
+}
+
+.o-1 {
+    grid-area: o-1;
+}
+
+.o-2 {
+    grid-area: o-2;
+}
+
+.Standard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "S-name S-Description";
+    grid-area: Standard;
+    background-color: #00EEFF;
+    border-radius: 2%;
+}
+
+.S-name {
+    grid-area: S-name;
+    text-align: center;
+    margin: 10%;
+}
+
+.S-name a {
     color: #0C0B0B;
-    text-align: center;
-    font-size: 200%;
-    padding-top: 2%;
-    border-top: 2px solid black;
-    width: 100%;
+    font-size: 40px;
 }
 
-.homepage .service_page {
+.S-name a:hover {
+    border: #000 solid 2px;
+    border-radius: 4px;
+}
+
+.S-Description {
+    grid-area: S-Description;
+    text-align: center;
+    margin: 10%;
+    font-size: 30px;
+}
+
+.Advanced {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "A-name A-description";
+    grid-area: Advanced;
+    background-color: #0066ff;
+    border-radius: 2%;
+}
+
+.A-description {
+    grid-area: A-name;
+    text-align: center;
+    margin: 10%;
+    font-size: 30px;
+
+}
+
+.A-name {
+    grid-area: A-description;
+    text-align: center;
+    margin: 10%;
+    font-size: 40px;
+
+}
+
+.A-name a {
     color: #0C0B0B;
-    text-align: center;
-    font-size: 100%;
+    font-size: 40px;
 }
 
-.homepage .standard-stuff {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
+.A-name a:hover {
+    border: #000 solid 2px;
+    border-radius: 4px;
 }
 
-.homepage .standard-stuff .standard-name {
-    color: #0EF;
-    text-align: center;
-    font-size: 400%;
-    align-self: center;
-    justify-self: center;
-    margin-right: 10%;
-    margin-top: 4%;
+.Premium {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "P-name P-description";
+    grid-area: Premium;
 }
 
-.homepage .standard-stuff .standard-text {
-    color: #0C0B0B;
-    text-align: center;
-    font-size: 150%;
-    align-self: center;
-    justify-self: center;
-    margin-left: 10%;
-    margin-top: 4%;
+.P-name {
+    grid-area: P-name;
 }
 
-.homepage .advanced-stuff {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
+.P-description {
+    grid-area: P-description;
 }
 
-.homepage .advanced-stuff .advanced-name {
-    color: #06F;
-    text-align: center;
-    font-size: 400%;
-    align-self: center;
-    justify-self: center;
-    margin-left: 10%;
-    margin-top: 4%;
-}
-
-.homepage .advanced-stuff .advanced-text {
-    color: #0C0B0B;
-    text-align: center;
-    font-size: 150%;
-    align-self: center;
-    justify-self: center;
-    margin-right: 10%;
-    margin-top: 4%;
+.Contact {
+    grid-area: Contact;
 }
