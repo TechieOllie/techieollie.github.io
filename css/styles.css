@@ -562,6 +562,7 @@ nav ul li #active {
 
 .o-2 {
     grid-area: o-2;
+    margin-bottom: 2%;
 }
 
 .Standard {
@@ -573,14 +574,14 @@ nav ul li #active {
     grid-template-areas:
         "S-name S-Description";
     grid-area: Standard;
-    background-color: #00EEFF;
-    border-radius: 2%;
 }
 
 .S-name {
     grid-area: S-name;
     text-align: center;
-    margin: 10%;
+    padding: 10%;
+    background-color: #00EEFF;
+    border-radius: 20px;
 }
 
 .S-name a {
@@ -609,8 +610,6 @@ nav ul li #active {
     grid-template-areas:
         "A-name A-description";
     grid-area: Advanced;
-    background-color: #0066ff;
-    border-radius: 2%;
 }
 
 .A-description {
@@ -624,7 +623,9 @@ nav ul li #active {
 .A-name {
     grid-area: A-description;
     text-align: center;
-    margin: 10%;
+    padding: 10%;
+    background-color: #0066ff;
+    border-radius: 20px;
     font-size: 40px;
 
 }
@@ -652,10 +653,28 @@ nav ul li #active {
 
 .P-name {
     grid-area: P-name;
+    text-align: center;
+    padding: 10%;
+    background-color: #000459;
+    border-radius: 20px;
+    font-size: 40px;
 }
 
 .P-description {
     grid-area: P-description;
+    text-align: center;
+    margin: 10%;
+    font-size: 30px;
+}
+
+.P-name a {
+    color: var(--main-color-4);
+    font-size: 40px;
+}
+
+.P-name a:hover {
+    border: var(--main-color-4) solid 2px;
+    border-radius: 4px;
 }
 
 .Contact {
