@@ -538,7 +538,9 @@ nav ul li #active {
     font-size: 40px;
     font-weight: 500;
     text-align: center;
-    margin: 2%;
+    padding: 2%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .offer {
@@ -553,7 +555,8 @@ nav ul li #active {
     grid-area: offer;
     text-align: center;
     font-size: 26px;
-
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .o-1 {
@@ -580,18 +583,17 @@ nav ul li #active {
     grid-area: S-name;
     text-align: center;
     padding: 10%;
-    background-color: #00EEFF;
+    background: linear-gradient(to left, #00a7b3, #22888f, #054a4f);
     border-radius: 20px;
 }
 
 .S-name a {
-    color: #0C0B0B;
+    color: #fff;
     font-size: 40px;
 }
 
 .S-name a:hover {
-    border: #000 solid 2px;
-    border-radius: 4px;
+    color: #000;
 }
 
 .S-Description {
@@ -624,20 +626,19 @@ nav ul li #active {
     grid-area: A-description;
     text-align: center;
     padding: 10%;
-    background-color: #0066ff;
+    background: linear-gradient(to right, #3271c9, #022252);
     border-radius: 20px;
     font-size: 40px;
 
 }
 
 .A-name a {
-    color: #0C0B0B;
+    color: #fff;
     font-size: 40px;
 }
 
 .A-name a:hover {
-    border: #000 solid 2px;
-    border-radius: 4px;
+    color: #000;
 }
 
 .Premium {
@@ -655,7 +656,7 @@ nav ul li #active {
     grid-area: P-name;
     text-align: center;
     padding: 10%;
-    background-color: #000459;
+    background: linear-gradient(to right, #3b42d1, #03074a);
     border-radius: 20px;
     font-size: 40px;
 }
@@ -668,15 +669,17 @@ nav ul li #active {
 }
 
 .P-name a {
-    color: var(--main-color-4);
+    color: #fff;
     font-size: 40px;
 }
 
 .P-name a:hover {
-    border: var(--main-color-4) solid 2px;
-    border-radius: 4px;
+    color: #000;
 }
 
 .Contact {
     grid-area: Contact;
+    text-align: center;
+    font-size: 30px;
+    padding: 5%;
 }
