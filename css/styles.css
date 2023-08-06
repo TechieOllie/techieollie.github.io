@@ -263,7 +263,32 @@ nav ul li {
     line-height: 400%;
 }
 
+.nav-mobile {
+    float: right;
+    padding: 1.6rem;
+    display: none;
+}
+
+.nav-mobile button {
+    background: none;
+    border: 0.2rem white 0.4rem;
+}
+
 /*if width under 500px then different navbar*/
+
+@media only screen and (max-width: 500px) {
+    nav {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: inline;
+    }
+
+    nav ul li {}
+}
+
+
 
 nav ul li a {
     color: var(--main-color-2);
@@ -291,6 +316,19 @@ nav ul li #active {
     justify-self: center;
     align-self: center;
     display: flex;
+
+}
+
+@media only screen and (max-width: 500px) {
+    .pricing-table {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .pricing-table .card {
+        margin: 2rem;
+    }
 
 }
 
@@ -535,12 +573,12 @@ nav ul li #active {
 
 .Slogan {
     grid-area: Slogan;
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 500;
     text-align: center;
-    padding: 2%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    padding: 2rem;
+    border-top-left-radius: 1.4rem;
+    border-top-right-radius: 1.4rem;
 }
 
 .offer {
@@ -554,9 +592,9 @@ nav ul li #active {
         "o-2";
     grid-area: offer;
     text-align: center;
-    font-size: 26px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    font-size: 1.5rem;
+    border-bottom-left-radius: 1.4rem;
+    border-bottom-right-radius: 1.4px;
 }
 
 .o-1 {
@@ -565,7 +603,7 @@ nav ul li #active {
 
 .o-2 {
     grid-area: o-2;
-    margin-bottom: 2%;
+    margin-bottom: 2rem;
 }
 
 .Standard {
@@ -582,14 +620,16 @@ nav ul li #active {
 .S-name {
     grid-area: S-name;
     text-align: center;
-    padding: 10%;
+    align-self: center;
+    padding-top: 2.1rem;
+    padding-bottom: 2.1rem;
     background: linear-gradient(to left, #00a7b3, #22888f, #054a4f);
-    border-radius: 20px;
+    border-radius: 1.4rem;
 }
 
 .S-name a {
     color: #fff;
-    font-size: 40px;
+    font-size: 2.4rem;
 }
 
 .S-name a:hover {
@@ -599,8 +639,8 @@ nav ul li #active {
 .S-Description {
     grid-area: S-Description;
     text-align: center;
-    margin: 10%;
-    font-size: 30px;
+    padding: 2.2rem;
+    font-size: 1.4rem;
 }
 
 .Advanced {
@@ -617,24 +657,24 @@ nav ul li #active {
 .A-description {
     grid-area: A-name;
     text-align: center;
-    margin: 10%;
-    font-size: 30px;
+    padding: 2.2rem;
+    font-size: 1.4rem;
 
 }
 
 .A-name {
     grid-area: A-description;
     text-align: center;
-    padding: 10%;
+    align-self: center;
+    padding-top: 2.1rem;
+    padding-bottom: 2.1rem;
     background: linear-gradient(to right, #3271c9, #022252);
-    border-radius: 20px;
-    font-size: 40px;
-
+    border-radius: 1.4rem;
 }
 
 .A-name a {
     color: #fff;
-    font-size: 40px;
+    font-size: 2.4rem;
 }
 
 .A-name a:hover {
@@ -655,22 +695,23 @@ nav ul li #active {
 .P-name {
     grid-area: P-name;
     text-align: center;
-    padding: 10%;
+    align-self: center;
+    padding-top: 2.1rem;
+    padding-bottom: 2.1rem;
     background: linear-gradient(to right, #3b42d1, #03074a);
-    border-radius: 20px;
-    font-size: 40px;
+    border-radius: 1.4rem;
 }
 
 .P-description {
     grid-area: P-description;
     text-align: center;
-    margin: 10%;
-    font-size: 30px;
+    padding: 2.2rem;
+    font-size: 1.4rem;
 }
 
 .P-name a {
     color: #fff;
-    font-size: 40px;
+    font-size: 2.4rem;
 }
 
 .P-name a:hover {
@@ -680,8 +721,8 @@ nav ul li #active {
 .Contact {
     grid-area: Contact;
     text-align: center;
-    font-size: 30px;
-    padding: 5%;
+    font-size: 1.4rem;
+    padding: 1.1rem;
 }
 
 .us {
