@@ -265,27 +265,81 @@ nav ul li {
 
 .nav-mobile {
     float: right;
-    padding: 1.6rem;
+    margin-right: 2.8rem;
+    margin-top: 2.2rem;
     display: none;
 }
 
-.nav-mobile button {
-    background: none;
-    border: 0.2rem white 0.4rem;
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 6px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
 }
 
 /*if width under 500px then different navbar*/
 
 @media only screen and (max-width: 500px) {
-    nav {
-        display: none;
-    }
 
     .nav-mobile {
-        display: inline;
+        display: block;
     }
 
-    nav ul li {}
+    .nav-mobile.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-mobile.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-mobile.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: 100%;
+        top: 6rem;
+        background-color: #000;
+        width: fit-content;
+        display: inline;
+        text-align: center;
+        transition: 0.3s;
+        border-radius: 0 0 21px 21px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 14px;
+        z-index: 9999;
+    }
+
+    .navbar.active {
+        border-radius: 0 0 0px 21px;
+        transition: 0.3s;
+    }
+
+    .navbar {
+        transition: 0.3s;
+    }
+
+    .nav-menu ul li {
+        color: #fff;
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 74%;
+    }
+
+    nav ul li {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 100%;
+
+    }
 }
 
 
