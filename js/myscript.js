@@ -31,3 +31,9 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navBar.classList.remove("active");
   })
 );
+
+/*window.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+  navBar.classList.remove("active");
+});*/
