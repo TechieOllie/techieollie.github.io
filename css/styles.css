@@ -690,7 +690,7 @@ nav ul li #active {
     color: #000;
 }
 
-.S-Description {
+.S-description {
     grid-area: S-Description;
     text-align: center;
     padding: 2.2rem;
@@ -776,74 +776,181 @@ nav ul li #active {
     grid-area: Contact;
     text-align: center;
     font-size: 1.4rem;
-    padding: 1.1rem;
+    padding: 1.8rem;
 }
 
-.us {
+@media only screen and (min-width: 600px) {
+
+    .S-name {
+        padding-top: 2.8rem;
+        padding-bottom: 2.8rem;
+    }
+
+    .S-description {
+        text-align: center;
+        align-self: center;
+    }
+
+    .A-name {
+        padding-top: 2.8rem;
+        padding-bottom: 2.8rem;
+    }
+
+    .A-description {
+        text-align: center;
+        align-self: center;
+    }
+
+    .P-name {
+        padding-top: 2.8rem;
+        padding-bottom: 2.8rem;
+    }
+
+    .P-description {
+        text-align: center;
+        align-self: center;
+    }
+}
+
+.team {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "photo_oliver text_oliver"
-        "text_simon photo_simon";
+        "Photos"
+        "Contact_info";
 }
 
-.photo_oliver {
-    grid-area: photo_oliver;
+.Photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Oliver_img Simon_img"
+        "Oliver_text Simon_text";
+    grid-area: Photos;
+    border-radius: 0px 0px 20px 20px;
+    background: #D9D9D9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding-bottom: 1.4rem;
+}
+
+.Oliver_img img,
+.Simon_img img {
+    width: 220px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-radius: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Oliver_img {
+    grid-area: Oliver_img;
+    padding-top: 3rem;
+}
+
+.Simon_img {
+    grid-area: Simon_img;
+    padding-top: 3rem;
+}
+
+.Oliver_text {
+    grid-area: Oliver_text;
     text-align: center;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    position: relative;
+    top: -10%;
 }
 
-.photo_oliver img {
-    height: 400px;
-    margin: 6%;
-    border-radius: 20px;
-    box-shadow: 2px 6px 4px rgba(0, 0, 0, 0.25);
+.Oliver_text span {
+    font-weight: 600;
+    font-size: 2.6rem;
 }
 
-.text_oliver {
-    grid-area: text_oliver;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text_oliver ul {
-    list-style: circle inside;
-    line-height: 2;
-    font-size: 25px;
-}
-
-.text_oliver ul li a {
-    color: #551a8b;
-}
-
-.photo_simon {
-    grid-area: photo_simon;
+.Simon_text {
+    grid-area: Simon_text;
     text-align: center;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    position: relative;
+    top: -10%;
 }
 
-.photo_simon img {
-    height: 400px;
-    margin: 6%;
-    border-radius: 20px;
-    box-shadow: -2px 6px 4px rgba(0, 0, 0, 0.25);
+.Simon_text span {
+    font-weight: 600;
+    font-size: 2.8rem;
 }
 
-.text_simon {
-    grid-area: text_simon;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Contact_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Contact_us Contact_us"
+        "message_icon email_icon"
+        "phone_numbers emails";
+    grid-area: Contact_info;
 }
 
-.text_simon ul {
-    list-style: circle inside;
-    line-height: 2;
-    font-size: 25px;
+.Contact_us {
+    grid-area: Contact_us;
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 4.2rem;
+    color: #35A9B1;
 }
 
-.text_simon ul li a {
-    color: #551a8b;
+.message_icon img,
+.email_icon img {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 2rem;
+}
+
+.message_icon {
+    grid-area: message_icon;
+}
+
+.email_icon {
+    grid-area: email_icon;
+}
+
+.phone_numbers {
+    grid-area: phone_numbers;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.4rem;
+}
+
+.emails {
+    grid-area: emails;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 500px) {
+
+    .team {
+        grid-auto-flow: column;
+    }
+
+    .Oliver_text span {
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+
+    .Simon_text span {
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
 }
